@@ -1,0 +1,29 @@
+@CHARSET "UTF-8";
+.tab_panel_bar{
+	
+}
+.tab_panel_link{
+	
+}
+.tab_panel_link_current{
+	color: #333333;
+	cursor: hand;
+}
+.tab_panel_link_current:hover{
+	text-decoration: none;
+}
+
+.tab_panel_bottom{
+	clear: both;
+}
+.tabPanel{
+	display:none;
+}
+
+.tabPanel div{
+	clear: both;
+}
+
+.tabPanel label{
+	width: 150px;
+}

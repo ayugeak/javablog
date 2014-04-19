@@ -1,0 +1,212 @@
+@CHARSET "UTF-8";
+#titleText{
+	width:620px;
+	height: 20px;
+	padding: 5px;
+	border: 1px solid silver;
+}
+#editor_box {
+	width: 630px;
+	border: 1px solid silver;
+}
+#textarea_box {
+	display: none;
+	width: 630px;
+	min-height: 410px;
+	margin: 0px;
+	padding: 0px;
+	background: #F7F7F7;
+}
+#contentText {
+	background: none repeat scroll 0 0 #FFFFFF;
+    min-height: 400px;
+    padding: 2px;
+    width: 624px;
+    border: none;
+    word-wrap: break-word;
+    resize: vertical;
+	overflow-y: auto;
+}
+
+#editor {
+	width: 630px;
+	margin: 0px;
+	padding: 0px;
+	background: #F7F7F7;
+}
+
+#toolbar {
+	width: 630px;
+	padding: 0px;
+	height: 30px;
+	background: #F7F7F7;
+	border-bottom: 1px solid silver;
+}
+
+#toolbar span {
+	cursor: default;
+	height: 20px;
+	width: 20px;
+	padding: 0px;
+	margin: 3px;
+	float: left;
+	background-image: url('../images/icons.png');
+	background-color: #FFFFFF;
+	position: relative;
+	border: 1px solid silver;
+}
+
+#toolbar span:hover {
+	background-color: #AAE5EC;
+}
+
+#editorframe_box {
+	width: 630px;
+	min-height: 410px;
+	background: #FFFFFF;
+}
+
+#editframe {
+	width: 620px;
+	min-height: 410px;
+	padding: 5px;
+	border: 0px;
+	resize: vertical;
+	overflow-y: auto;
+}
+
+#boldbutton {
+	background-position: 0 0;
+}
+
+#italicbutton {
+	background-position: -60px 0;
+}
+
+#underlinebutton {
+	background-position: -140px 0;
+}
+
+#unorderbutton {
+	background-position: -20px 0;
+}
+
+#orderbutton {
+	background-position: -80px 0;
+}
+
+#leftbutton {
+	background-position: -460px 0;
+}
+
+#centerbutton {
+	background-position: -440px 0;
+}
+
+#rightbutton {
+	background-position: -480px 0;
+}
+
+#linkbutton {
+	background-position: -500px 0;
+}
+
+#removeformatbutton {
+	background-position: -40px 0;
+}
+
+#imagebutton {
+	background-position: -380px 0;
+}
+
+#docbutton {
+	background-position: -580px 0;
+}
+
+#fontnamebutton {
+	background-position: -700px 0;
+}
+
+#fontsizebutton {
+	background-position: -600px 0;
+}
+
+#forecolorbutton {
+	background-position: -720px 0;
+}
+
+#backcolorbutton {
+	background-position: -760px 0;
+}
+
+#previewbutton {
+	background-position: -420px -20px;
+}
+
+#sourcebutton {
+	background-position: -260px 0;
+}
+
+.pickercontainer{
+	display:none;
+	z-index:10;
+	width:150px;
+	background:#FFFFFF;
+	border:1px #EAEAEA solid;
+}
+.pickercontainer ul,li{
+	display:block;
+	list-style-type:none;
+	padding:0px;
+	margin:0px;
+}
+.pickercontainer li{
+	width:145px;
+	padding:2px 0px 2px 5px;
+	border-bottom:1px solid #FAFAFA;
+}
+.pickercontainer li:hover{
+    background:#c5d2d4;
+}
+#fontcontainer{
+	position:absolute;
+	top:90px;
+	left:210px;
+}
+#fontsizecontainer{
+	position:absolute;
+	top:90px;
+	left:235px;
+}
+
+#colorcontainer{
+	display:none;
+	z-index:10;
+	width:180px;
+	overflow: hidden;
+	background:#FFFFFF;
+	border:1px #EAEAEA solid;
+	position:absolute;
+	top:90px;
+	left:260px;
+}
+
+#colorcontainer td{
+	width: 16px;
+	height: 16px;
+}
+#colorcontainer div{
+	width: 100%;
+	height: 100%;
+}
+#tagBox{
+	
+}
+#tagBox span{
+	cursor: pointer;
+	border: 1px solid #BBBBBB;
+}
+#tagBox span:hover{
+	background: #F5F5F5;
+}
+

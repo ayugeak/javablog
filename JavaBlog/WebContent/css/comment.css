@@ -1,0 +1,149 @@
+@CHARSET "UTF-8";
+
+#commentlist li {
+	margin: 5px 0px 5px 0px;
+	padding: 0px;
+	clear: both;
+}
+
+#commentlist li .avatar {
+	padding: 0px 15px 0px 15px;
+}
+
+.strong{
+	color: red;
+	font-weight: bold;
+	cursor: help;
+}
+
+.comment0 .userinfo {
+	float: left;
+}
+
+.comment0 .commentinfo {
+	float: right;
+}
+
+.comment1 .userinfo {
+	float: right;
+}
+
+.comment1 .commentinfo {
+	float: left;
+}
+
+.userinfo {
+	padding: 2px 0px 2px 0px;
+	width: 80px;
+	height: 90px;
+}
+
+.name {
+	height: 25px;
+	padding: 5px 0px 5px 0px;
+	line-height: 25px;
+	text-align: center;
+}
+
+.commentinfo {
+	width: 560px;
+	padding: 4px;
+}
+
+.reply {
+	height: 26px;
+	padding: 2px;
+	line-height: 26px;
+}
+
+.content {
+	clear: both;
+	width: 550px;
+	min-height: 60px;
+	padding: 5px;
+	word-wrap: break-word;
+	color: #333333;
+	background: #FAFAFA;
+	border-radius: 5px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	position: relative;
+}
+.content:before {
+	content: "";
+	position: absolute;
+	top: 20px;
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+}
+.comment0 .content:before {
+	right: 100%;
+	border-right: 15px solid #FAFAFA;
+}
+.comment1 .content:before {
+	left: 100%;
+	border-left: 15px solid #FAFAFA;
+}
+#newcomment {
+	clear: both;
+	width: 640px;
+	overflow: hidden;
+	padding: 5px;
+	margin: 5px 0px 0px 0px;
+	color: #333333;
+}
+#newcomment .avatar {
+	padding: 0px 13px 0px 10px;
+}
+.input {
+	width: 300px;
+	height: 25px;
+	padding: 0px;
+	border: 1px solid #BCBCBC;
+	border-right: 0px;
+	margin: 0px;
+	background: #FFFFFF;
+	border-radius: 3px 0px 0px 3px;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2) inset;
+}
+
+.label {
+	width: 255px;
+	display: block;
+	text-align: left;
+	color: #666666;
+	background: #F5F5F5;
+	margin: 0px;
+	padding: 0px 0px 0px 5px;
+	height: 25px;
+	line-height: 25px;
+	border: 1px solid #BCBCBC;
+	border-left: 0px;
+	border-radius: 0px 3px 3px 0px;
+}
+
+#newinfo div {
+	height: 27px;
+	margin: 3px 0px 3px 0px;
+}
+
+#contentbox {
+	clear: both;
+	margin: 3px 0px 3px 0px;
+}
+
+#content {
+	min-height: 150px;
+	max-height: 300px;
+	width: 560px;
+	margin: 0px;
+	padding: 0px;
+	resize: vertical;
+	overflow-y: auto;
+	border: 1px solid #BCBCBC;
+	color: #333333;
+	background: #FFFFFF;
+	border-radius: 3px;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2) inset;
+}

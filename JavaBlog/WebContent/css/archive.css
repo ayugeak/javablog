@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+
+.archivedate{
+padding:5px;
+margin:0px;
+}
+.archive{
+margin:5px 0px 0px 50px;
+padding:0px;
+}
+.archive li{
+	display:list-item;
+	list-style-type:decimal;
+}
+.archive a,
+.archive a:link,
+.archive a:active,
+.archive a:visited{
+	color:#04B1F2;
+	text-decoration:none;
+}
+.archive a:hover{
+	text-decoration:underline;
+}

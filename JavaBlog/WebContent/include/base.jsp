@@ -1,0 +1,1 @@
+<jsp:include page="dynamic/base.jsp"></jsp:include>

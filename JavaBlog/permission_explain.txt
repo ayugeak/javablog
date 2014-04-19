@@ -1,0 +1,99 @@
+//删除指完全删除，编辑包括更改状态（移至回收站，还原，审核等）和修改，只有正常状态的记录才能够移到回收站
+//把权限分散，无超级用户，如分为专门管理用户与角色的，专门管理文章和评论的，专门管理选项和日志的等，而不要把所有的权限集中在一起
+//每个人都可以删除自己发的信息
+//后台管理时，首先判断用户是否登录，然后判断参数是否合法，最后判断是否拥有相应权限（因为判断权限要涉及到数据库的操作，所以要最后做）
+权限：
+//角色权限
+readRole:查看角色
+addRole:添加角色
+editRole:编辑角色（包括添加，修改）
+deleteRole:删除角色
+
+//用户权限
+readUser:查看用户
+addUser:添加用户
+editUser:修改用户
+deleteUser:删除用户
+
+//文章权限
+readArticle:查看所有文章，包括草稿和回收站中的文章
+addArticle:添加文章
+editPrivateArticle:修改个人文章
+editOtherArticle:修改别人的文章
+deleteArticle:删除文章
+
+//评论权限
+readComment:查看所有评论，包括审核的和未审核的
+editComment:编辑评论
+deleteComment:删除评论
+
+//分类管理
+readCategory:查看所有分类
+addCategory:添加分类
+editCategory:编辑分类
+deleteCategory:删除分类
+
+//标签管理
+readTag:查看所有标签
+addTag:添加标签
+editTag:编辑标签
+deleteTag:删除标签
+
+//信息权限
+readMessage:阅读所有信息
+addMessage:发送信息
+deleteMessage:删除信息
+
+//资源权限（上传文件权限）
+readResource:查看所有资源
+addResource:上传资源
+editResource:修改资源
+deleteResource:删除资源
+
+//链接权限
+readLink：查看所有链接
+addLink：添加链接
+editLink：编辑链接
+deleteLink：删除链接
+
+//日志权限
+readLog:阅读所有日志
+addLog:添加日志
+editLog:编辑日志
+deleteLog:删除日志
+
+//系统设置权限
+
+
+权限：用字符串表示，当时每个字符串只使用0和1，但是这样比较浪费空间，而且可扩展性差，因为权限位都是按顺序排列的，
+比如先用户组权限，再用户权限，这样如果想在用户组权限中添加一个权限位的话就无处可放，因此改进后的表示方法为：
+一个字符表示一类权限，如用户组权限是一类，用户权限是一类，由于一个字符占8字节，每个字节可为0或1，因此每类权限中
+最多可包含8种权限，这用来表示查看、添加、修改等权限足够了
+如用户组权限位为：
+|NULL	|NULL	|NULL	|NULL	|delete	|edit	|add	|read	|
+|0/1	|0/1	|0/1	|0/1	|0/1	|0/1	|0/1	|0/1	|
+
+前台：
+var perm = 0;
+位i（0－7）的权限为p（0/1）
+perm |= p << i;
+var perms[10];//共10类权限
+第j类权限为
+perms[j] = perm;
+
+因为前台只能用整型数组形式保存权限，因此后台要进行转换，
+前台把perms数组传给后台形式为：p0,p1,p2,p3,p4,p5,p6,p7
+后台用String接收后，对其进行分割：
+String permissions = request.getParameter("perms");
+String[] perms = permissions.split(",");
+
+检查第i类权限：
+char pi = (char)Integer.parseInt(perms[i]);
+再对每个权限位进行相应检查，检查没问题就保存
+String finalPerm = "";
+finalPerm += pi;
+
+
+
+
+
